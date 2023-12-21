@@ -4,19 +4,23 @@
 
     import { reactive } from 'vue';
 
-    let hiddenStyle = reactive({ width: "0", borderColor: "#0000"})
+    let shadeColor = "#4e4"
+
+    let hiddenStyle = reactive({ width: "0", backgroundColor: "#0000", borderColor: "#0000"})
     let hiddenIconStyle = reactive({ width: "1.2em"})
 
     function showMenu(){
         hiddenStyle.width = "9.5em"
-        hiddenStyle.borderColor = "#2d2";
+        hiddenStyle.backgroundColor = shadeColor
+        hiddenStyle.borderColor = shadeColor
 
         hiddenIconStyle.width = "0"
     }
 
     function hideMenu(){
         hiddenStyle.width = "0"
-        hiddenStyle.borderColor = "#0000";
+        hiddenStyle.backgroundColor = "#0000"
+        hiddenStyle.borderColor = "#0000"
 
         hiddenIconStyle.width = "1.2em"
 
@@ -52,6 +56,7 @@
 
 :root{
     --hover-color: #777;
+    --shade-color: #2d2;
 }
 
 a{
@@ -100,16 +105,9 @@ a:hover{
     flex-wrap: nowrap;
     overflow-x: hidden;
     font-size: 0.8em;
-    border: 0.15em solid #2d2;
+    border: 0.15em solid;
     border-radius: 0.2em;
     transition: 0.3s width ease;
-}
-
-.vertSeparator{
-    width: 0.15em;
-    border-radius: 0.1em;
-    background-color: #2d2;
-    margin: 0.1em 0;
 }
 
 .hiddenClose{
