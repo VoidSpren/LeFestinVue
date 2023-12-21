@@ -3,12 +3,7 @@
 
 <template>
     <div class="mainContainer">
-        <div>
-            hello
-        </div>
-        <div>
-            world!
-        </div>
+
     </div>
 </template>
 
@@ -16,5 +11,10 @@
 .mainContainer{
     display: grid;
     grid-template-columns: 1fr 5fr;
+}
+
+.searchPanel{
+    grid-column: 1;
+
 }
 </style>
